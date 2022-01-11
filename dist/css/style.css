@@ -65,6 +65,11 @@ body {
 	margin: 0 auto;
 }
 
+.btn:focus {
+	outline: none;
+	box-shadow: none;
+}
+
 /*Common CSS Complete*/
 
 
@@ -109,6 +114,7 @@ body {
 	font-weight: 500;
 	color: #FFF;
 }
+
 /*Header Area End*/
 
 
@@ -153,6 +159,7 @@ body {
 	background-color: #EF7F4D;
 	transition-duration: 0.5s;
 }
+
 /*Hero Area End*/
 
 
@@ -294,6 +301,66 @@ body {
 
 .port_img {
 	border-radius: 5px;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.photo {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 100%;
+	right: 0;
+	background-color: rgb(144, 134, 128, 0.5);
+	border-radius: 5px;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+.port_icon {
+	position: absolute;
+	top: 49%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.icon_plus {
+	color: #EB5D1E;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #fff;
+	padding: 3px 11px 6px 11px;
+	border-radius: 50%;
+	transition: .4s ease;
+	margin-right: 10px;
+}
+
+.icon_link {
+	color: #EB5D1E;
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 50%;
+	transition: .4s ease;
+}
+
+.icon_plus:hover,
+.icon_link:hover {
+	background-color: #EB5D1E;
+	color: #fff;
+}
+
+.photo:hover .overlay {
+	width: 100%;
+	left: 0;
 }
 
 /*Portfolio Area End*/
@@ -339,6 +406,10 @@ body {
 .clients-pic {
 	margin-top: 60px;
 	margin-bottom: 25px;
+}
+
+.clients-pic img:hover {
+	opacity: 0.5;
 }
 
 .clients_btn {
@@ -494,6 +565,7 @@ textarea {
 
 .message_btn:hover {
 	background-color: #EF7F4D;
+	color: #FFF;
 	transition-duration: 0.5s;
 }
 
@@ -535,7 +607,8 @@ input.subscribe_mail {
 }
 
 .subscribe_btn {
-	padding: 10px 24px;
+	padding: 11px 26px;
+	margin-top: -5px;
 	margin-left: -5px;
 	border: none;
 	border-radius: 5px;
@@ -547,6 +620,7 @@ input.subscribe_mail {
 }
 
 .subscribe_btn:hover {
+	color: #FFF;
 	background-color: #C54811;
 }
 
